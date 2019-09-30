@@ -1,0 +1,131 @@
+@import 'common/common'
+
+*
+    box-sizing border-box
+body
+    font-family 'Montserrat', sans-serif
+.flex
+    display flex
+.flex-wrap
+    display flex
+    flex-wrap wrap
+.flex-column
+    display flex
+    flex-direction column
+.flex-center
+    align-items center
+    justify-content center
+.flex-between
+    justify-content space-between
+
+.bg
+    background-size cover
+    background-repeat no-repeat
+    background-position center center
+
+::-webkit-input-placeholder
+  color rgba(158, 158, 158, 0.8)
+  font-size 12px
+:-ms-input-placeholder
+  color rgba(158, 158, 158, 0.8)
+::placeholder
+  color rgba(158, 158, 158, 0.8)
+
+.container
+    max-width 1360px
+    margin 0 auto
+    padding-left 20px
+    padding-right 20px
+
+.global-wrapper
+    position relative
+    background-image linear-gradient(to right top, #da1cda, #a964fd, #6e87ff, #2a9fff, #00b1ff)
+.content-wrapper
+    height 100vh
+.auth
+    max-width 400px
+    width 100%
+    background white
+    padding 30px
+    border-radius 4px
+    box-shadow 0 0 42px -8px rgba(0, 0, 0, 0.57)
+    &__title
+        font-size 28px
+        margin-bottom 30px
+        text-align center
+        font-weight bold
+    .form
+        &__input
+            margin-bottom 20px
+            input
+                display block
+                width 100%
+                border 1px solid #6889ff
+                border-radius 4px
+                padding 10px 20px
+            label
+                color #6889ff
+                font-size 14px
+                margin-bottom 3px
+        &__checkbox
+            justify-content flex-end
+            input[type=checkbox] + label
+                display flex
+                align-items center
+                justify-content center
+                line-height 1
+                cursor pointer
+                user-select none
+                font-size 12px;
+            input[type=checkbox]
+                display none
+            input[type=checkbox] + label:before
+                content "\2714"
+                border 1px solid #6889ff
+                border-radius 2px
+                display inline-block
+                width 12px
+                height 12px
+                padding 3px
+                text-align center
+                margin-right 6px
+                vertical-align bottom
+                color transparent
+                transition .2s
+            input[type=checkbox] + label:active:before
+                transform scale(0)
+            input[type=checkbox]:checked + label:before
+                background-color white
+                border-color #6889ff
+                color #6889ff
+            input[type=checkbox]:disabled + label:before
+                transform scale(1)
+                border-color #aaa
+            input[type=checkbox]:checked:disabled + label:before
+                transform scale(1)
+                background-color #bfb
+                border-color #bfb
+        &__submit
+            margin-top 20px
+            button
+                display block
+                border 0
+                background #6889ff
+                color white
+                padding 15px 20px
+                border-radius 4px
+                width 100%
+                box-shadow 0 0 20px -10px rgba(90, 90, 90, 0.5)
+                cursor pointer
+                transition all 0.3s
+                &:hover
+                    box-shadow 0 0 20px -5px rgba(90, 90, 90, 0.8)
+
+@media screen and (max-width 768px)
+    .auth
+        &__title
+            font-size 22px
+        max-width 280px
+        padding 20px 15px
+        .form__checkbox
+            justify-content center

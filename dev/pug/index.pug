@@ -1,0 +1,29 @@
+doctype html
+html(lang="ru-RU")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv='X-UA-Compatible', content="IE=edge")
+        meta(name="viewport" content="width=device-width,initial-scale=1")
+
+        link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic" rel="stylesheet")
+        link(rel="stylesheet" type='text/css' href="css/vendor.min.css")
+        link(rel="stylesheet" type='text/css' href="css/style.css")
+
+    body
+        .global-wrapper
+
+            .content-wrapper.flex.flex-center
+                .auth
+                    .auth__title Авторизация
+                    form#auth.auth__form
+                        .form__input.flex-column
+                            label(for="email") Введите E-mail*:
+                            input(type="email" name="email" id="email" placeholder="test@test.ru" required)
+                        .form__input.flex-column
+                            label(for="password") Введите пароль*:
+                            input(type="password" name="password" id="password" placeholder="******" required)
+                        .form__checkbox.flex
+                            input(type="checkbox" name="checkbox" id="checkbox")
+                            label(for="checkbox") Запомнить меня
+                        .form__submit
+                            button(type="submit") Авторизоваться
